@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
@@ -28,44 +29,41 @@ public class Main {
         System.out.println();
 
         System.out.println("Массивы часть 1, задача №3");
-        int length = 0;
-        for (int element : numbers) {
-            length++;
-        }
-        for (int i = length - 1; i >= 0; i--) {
-            System.out.print(numbers[i] + " ,");
-        }
-        System.out.println();
-
-        int length1 = 0;
-        for (double element : fractional) {
-            length1++;
-        }
-        for (int i = length1 - 1; i >= 0; i--) {
-            System.out.print(fractional[i] + " ,");
+        for (int i = numbers.length - 1; i >= 0; i--) {
+            System.out.print(numbers[i]);
+            if (i > 0) {
+                System.out.print(", ");
+            }
         }
         System.out.println();
 
-        int length2 = 0;
-        for (int element : cars) {
-            length2++;
-        }
-        for (int i = length2 - 1; i >= 0; i--) {
-            System.out.print(cars[i] + " ,");
+        for (int i = fractional.length - 1; i >= 0; i--) {
+            System.out.print(fractional[i]);
+            if (i > 0) {
+                System.out.print(", ");
+
+            }
         }
         System.out.println();
 
-        System.out.println("Массивы часть 1, задача №3");
+
+        for (int i = cars.length - 1; i >= 0; i--) {
+            System.out.print(cars[i]);
+            if (i > 0) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+
+        System.out.println("Массивы часть 1, задача №4");
 
         for (int i = 0; i <= numbers.length; i++) {
             if (numbers[i] % 2 != 0) {
                 numbers[i]++;
-                System.out.print(numbers[i] + " ,");
+                System.out.print(numbers[i]);
+                if (i < 2)
+                 System.out.print(", "); }
             }
+
         }
-
-
     }
-
-
-}
